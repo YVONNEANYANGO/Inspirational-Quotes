@@ -7,7 +7,9 @@
   <img width="300" alt="Goals Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ3DQ5uXxE5hvTpacGsMyEl2zFFiHaS_RC21yNrpZKAfcyzy2TWA">
 
 <ul>
-  <li *ngFor='let quote of quotes'>{{quotes}}</li>
+  <li *ngFor='let quote of quotes'>{{quote.name}}</li>
 </ul>
+   <p *ngIf='quotes.length >5'>Your lucky to have known all those quotes!</p>
+   <p *ngIf='quotes.length <=0'>Pull up your socks,you can still improve!</p>
 
 
