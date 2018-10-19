@@ -1,8 +1,15 @@
 
 <h1>Quotes</h1>
+<hr>
 
 <ul>
-  <li *ngFor='let quote of quotes'>{{quote.name}}</li>
+  <div *ngFor='let quote of quotes;let i = index'>
+    <li>{{quote.name}}</li>
+   <button (click)='ToogleDetails(i)'>Toogle Details</button>
+
+   <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeGoal($event,i)'></app-quote-details>
+  
+  </div>
 </ul>
    <p *ngIf='quotes.length >5'>Your lucky to have known all those quotes!</p>
    <p *ngIf='quotes.length <=0'>Pull up your socks,you can still improve!</p>

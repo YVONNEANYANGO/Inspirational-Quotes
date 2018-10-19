@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+li {
+    list-style-type: none;
+    font-family: fantasy;
+    font-size: medium;
+    color:brown;
+    font-size:20px;
+    
+}
+p {
+    font-size: 50px;
+    padding-right:10px;
+    padding-left:10px;
+    padding-top:5px;
+
+
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+}
