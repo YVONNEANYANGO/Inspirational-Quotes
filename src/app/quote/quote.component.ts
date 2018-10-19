@@ -17,6 +17,12 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'No act of kindness,no matter how small,is ever wasted.','Author :Aesop'),
   ]
 
+  completeQuote(isComplete,index) {
+    if (isComplete){
+      this.quotes.slice(index,1);
+    }
+  }
+
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
