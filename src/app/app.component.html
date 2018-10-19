@@ -2,9 +2,13 @@
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
-  </h1>
+  <h1>Quotes</h1>
+
   <img width="300" alt="Goals Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ3DQ5uXxE5hvTpacGsMyEl2zFFiHaS_RC21yNrpZKAfcyzy2TWA">
 </div>
+<ul>
+  <li *ngFor='let quote of quotes'>{{quotes}}</li>
+</ul>
 <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
