@@ -1,14 +1,30 @@
+<!-- <h1>Quotes</h1> -->
+<div class="container">
+  <div class="row">
+   <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
-<h1>Quotes</h1>
-
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.name}}</li>
-   <button (click)='toogleDetails(i)'>Toogle Details</button>
-
-   <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeGoal($event,i)'></app-quote-details>
-  
   </div>
-</ul>
-   <p *ngIf='quotes.length >5'>Your lucky to have known all those quotes!</p>
-   <p *ngIf='quotes.length <=0'>Pull up your socks,you can still improve!</p>
+
+    <div class="row" *ngFor="let quote of quotes;let i = 'index'">
+        <!-- <app-quote-form></app-quote-form> -->
+    <div class="row">
+      <p>{{quote.name}}</p>
+    <button class="btn btn-primary" (click)='toogleDetails(i)'>More Info</button>
+      <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+    </div>
+    <!-- <div *ngFor='let quote of quotes;let i = index'> -->
+
+      <!-- <button (click)='toogleDetails(i)'>Toogle Details</button> -->
+
+    </div>
+    <!-- <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeGoal($event,i)'></app-quote-details> -->
+
+
+
+
+
+</div>
+
+
+<p *ngIf='quotes.length >5'>Your lucky to have known all those quotes!</p>
+<p *ngIf='quotes.length <=0'>Pull up your socks,you can still improve!</p>
